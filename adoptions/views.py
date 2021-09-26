@@ -13,4 +13,4 @@ def pet_detial(request, pet_id):
         pet = Pet.objects.get(id=pet_id)
     except Pet.DoesNotExist:
         raise Http404('Pet not found')
-    return render(request,'pet_detial.html',{'pets': pet,})
+    return render(request,'pet_detial.html',{'pet': pet,})
